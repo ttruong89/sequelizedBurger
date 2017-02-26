@@ -6,12 +6,18 @@
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
-  "test": {
-    "use_env_variable": "JAWSDB_URL",
+   "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
-   "production": {
-    "use_env_variable": "JAWSDB_URL",
+  "production": {
+    "username": "ui9iaf8pj2s32jfg",
+    "password": "rewpmoqditqo4l30",
+    "database": "v2359776ftwh4kqh",
+    "host": "d6ybckq58s9ru745.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
