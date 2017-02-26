@@ -1,3 +1,5 @@
+// Sequelize model taken from author/post activity in class.
+
 module.exports = function(sequelize, Datatypes) {
   var Burger = sequelize.define("Burger", {
     burger_name: {

@@ -7,7 +7,7 @@ var app = express();
 // require models for syncing
 var db = require('./models');
 
-// Override with POST having ?_method=DELETE.
+// Override with POST having ?_method.
 app.use(methodOverride("_method"));
 
 // serve static content for the app from the "public/assets" directory

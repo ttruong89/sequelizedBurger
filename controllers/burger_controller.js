@@ -8,7 +8,9 @@ router.get("/", function(req, res) {
   res.redirect("/burgers");
 });
 
+// Get all of the burgers route.
 router.get("/burgers", function(req, res) {
+  // FindAll returns all entries for a table when used with no options.
   db.Burger.findAll({}).then(function(burgerData) {
     res.render("index", { burger_data: burgerData });
   });
@@ -16,8 +18,8 @@ router.get("/burgers", function(req, res) {
 
 // post route -> back to index
 router.post("/burgers/create", function(req, res) {
+  // Create burger objects.
   db.Burger.create({
-    id: null,
     burger_name: req.body.burger_name,
     devoured: false
   });
@@ -26,6 +28,7 @@ router.post("/burgers/create", function(req, res) {
 
 // put route -> back to index
 router.put("/burgers/update", function(req, res) {
+  // Update burger objects by id.  Devoured or not.
   db.Burger.update({
     devoured: true
   }, {
